@@ -2,7 +2,7 @@
 
 A Python command-line tool that **discovers logger subfolders**, **merges** `OverAll`, `SLog`, and `THist` into a single `.831` file (with the `NPSLD831` header + offsets), and **renames** the output to `SPL_<SITE>_<yyyy_MM_dd_HHmmss>.831` **two levels above** the `THist` folder. Optionally, it can **adjust internal timestamps** in all time‑history records to align with a new date.
 
-> This is a Python port of the original WinForms C# utility (`LD831Renamer.cs` + `.designer.cs`) and mirrors its core behavior.
+This is a Python port of the original WinForms C# utility (`LD831Renamer.cs` + `.designer.cs`) and mirrors its core behavior.
 
 ## AMT2PY
 Repository for mirrored NSNSD Acoustic Monitoring Toolbox (AMT), a C++ executable for processing, visualizing, and summarizing acoustic data. This repo adds flexibility by converting C++ scripts to Python due to loss of in-house C++ expertise.
@@ -40,16 +40,16 @@ ROOT — Root folder containing subfolders with OverAll, SLog, THist.
 
 ## Examples
 
-# Basic run
+### Basic run
 > `python 831Renamer.py ~/data/ld_runs --site SPL1`
 
-# Preview only
+### Preview only
 > `python 831Renamer.py ~/data/ld_runs --site SPL1 --dry-run`
 
-# Adjust timestamps
+### Adjust timestamps
 > `python 831Renamer.py ~/data/ld_runs --site SPL1 --new-date "2025-04-10 12:34:56"`
 
-# Input/Output
+## Input/Output
 <some-subfolder>/
 ├─ OverAll
 ├─ SLog
