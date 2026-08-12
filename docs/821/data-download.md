@@ -46,9 +46,11 @@ Data download process for Type 1 821-env systems
 - When finished, go to the main menu, select the “File” dropdown, and click “Export to CSV.” After some time, a popup will appear indicating that the files have downloaded, along with the file location. You have two options:a. Select OK and manually navigate to:C:\Users\Public\Documents\PCB Piezotronics\G4\Metersorb. In the popup, select View Location, which will take you directly to the data.
 - Once at the download location, ensure you find the serial number and deployment date for the meter and the data of interest. This can become confusing as you download more data because G4 saves all downloads here by serial number and deployment date.
 - After confirming the correct data, select the folder and ensure it contains the following files: OBA, Session Log, Settings, Summary, and Time History files. Time History files will have a numerical suffix for longer deployments—expect up to three Time History files for a 30day deployment.
-- Copy the folder containing all CSVs and paste it into the RAW folder of the appropriate deployment.
-- Serial Number: All unit downloads for each respective unit will be in hereSerial Number and deployment date: All deployment downloads for the serial number will be in here. Copy this entire folder in the RAW folderSerial Number: All unit downloads for each respective unit will be in hereSerial Number and deployment date: All deployment downloads for the serial number will be in here. Copy this entire folder in the SPL folder
-- Serial Number: All unit downloads for each respective unit will be in here
-- Serial Number and deployment date: All deployment downloads for the serial number will be in here. Copy this entire folder in the RAW folder
-- Serial Number: All unit downloads for each respective unit will be in here
-- Serial Number and deployment date: All deployment downloads for the serial number will be in here. Copy this entire folder in the RAW folder
+- Copy the folder containing all CSVs and paste it into the **RAW** folder of the appropriate deployment.
+
+G4 Utility organizes exports under the PC by meter serial number, then by deployment date:
+
+- **Serial number folder** — all downloads for that LD821 unit
+- **Deployment date folder** — one deployment’s CSV set (OBA, Session Log, Settings, Summary, Time History)
+
+Copy the **deployment date folder** (the one that contains the Time History CSVs) into your deployment’s `RAW/` directory. Do **not** use a separate `SPL/` folder — older docs sometimes used that name; the standard layout for this repo is `RAW/` (see [`pipeline.md`](pipeline.md)).

@@ -1,2 +1,12 @@
+# Local Python environment
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor settings
+.vscode/
+
+# Local/ignored scripts
 ld831_batch_to_csv.py
 Metrics_compare.py
