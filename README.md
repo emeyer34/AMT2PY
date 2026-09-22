@@ -32,7 +32,7 @@ All **821** scripts open a **GUI** — nothing to edit in the code before runnin
 
 ### Prerequisites
 
-1. **Python 3.9+** (Company Portal)
+1. **Python 3.9++** (Company Portal) - IMPORTANT: On DOI hosts, you may need to launch "Miniforge Prompt" (install miniforge from the company portal if you do not already have it) and run Python commands from there to work smoothly with AppLocker. This approach works as of 2026-09-22.
 2. **Git** (Company Portal)
 3. **Field data** downloaded and organized per [`docs/821/data-download.md`](docs/821/data-download.md) (then process with [`docs/821/pipeline.md`](docs/821/pipeline.md))
 
@@ -69,13 +69,13 @@ source .venv/Scripts/activate
 
 ```Shell
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-5. With the environment active, run a script from the repo folder (each opens a GUI), e.g.:
+5. Now you're ready to proceed with the steps in [`docs/821/pipeline.md`](docs/821/pipeline.md)! With the environment active, you can run the data processing scripts, for example:
 
 ```Shell
-python ld821_combine.py
+python FeatherMC_combine.py
 ```
 
 ### Pulling updates
